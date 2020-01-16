@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/UI/TracksContainer.gd" type="Script" id=1]
+[ext_resource path="res://scripts/UI/Tracks/ButtonBack.gd" type="Script" id=2]
+
+[node name="Tracks" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Title" type="Label" parent="."]
+margin_left = 315.58
+margin_top = 99.3492
+margin_right = 619.58
+margin_bottom = 442.349
+text = "Track selection"
+
+[node name="TracksContainer" type="GridContainer" parent="."]
+margin_left = 138.31
+margin_top = 142.206
+margin_right = 797.31
+margin_bottom = 722.206
+columns = 4
+script = ExtResource( 1 )
+
+[node name="ButtonBack" type="Button" parent="."]
+margin_right = 198.0
+margin_bottom = 77.0
+text = "back"
+script = ExtResource( 2 )
+
+[node name="ItemList" type="ItemList" parent="."]
+visible = false
+margin_left = 249.181
+margin_top = 202.715
+margin_right = 435.181
+margin_bottom = 392.715
+select_mode = 1
+max_columns = 4

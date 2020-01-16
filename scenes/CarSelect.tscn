@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/UI/CarSelect/Info.gd" type="Script" id=1]
+[ext_resource path="res://scripts/UI/CarSelect/ButtonBack.gd" type="Script" id=2]
+[ext_resource path="res://scripts/UI/CarSelect/ButtonSelect.gd" type="Script" id=3]
+[ext_resource path="res://Assets/812-superfast.gltf" type="PackedScene" id=4]
+[ext_resource path="res://scripts/Turn.gd" type="Script" id=5]
+
+[node name="CarSelect" type="Spatial"]
+
+[node name="Info" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="NameLabel" type="Label" parent="Info"]
+margin_left = 446.0
+margin_top = 103.0
+margin_right = 599.0
+margin_bottom = 141.0
+
+[node name="AccelerationLabel" type="Label" parent="Info"]
+margin_left = 47.6003
+margin_top = 99.9606
+margin_right = 129.6
+margin_bottom = 113.961
+text = "acceleration: "
+
+[node name="TopSpeedLabel" type="Label" parent="Info"]
+margin_left = 58.707
+margin_top = 136.454
+margin_right = 126.707
+margin_bottom = 150.454
+text = "top speed: "
+
+[node name="Title" type="Label" parent="Info"]
+margin_left = 354.931
+margin_top = 42.459
+margin_right = 417.931
+margin_bottom = 56.459
+text = "Car select"
+
+[node name="ButtonBack" type="Button" parent="."]
+margin_right = 198.0
+margin_bottom = 77.0
+text = "back"
+script = ExtResource( 2 )
+
+[node name="ButtonSelect" type="Button" parent="."]
+margin_left = 652.124
+margin_top = 198.335
+margin_right = 850.124
+margin_bottom = 275.335
+text = "select"
+script = ExtResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.81122, 42.0111 )
+
+[node name="812-superfast" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+script = ExtResource( 5 )
